@@ -91,7 +91,7 @@ function App() {
 
       {/* Footer */}
       <footer className="bg-gray-200 py-4 mt-16">
-        <p className="text-center text-gray-600">&copy; 2024 [Your Name]. All rights reserved.</p>
+        <p className="text-center text-gray-600">&copy; 2024 Mark Neil Jugarap. All rights reserved.</p>
       </footer>
     </div>
   );
