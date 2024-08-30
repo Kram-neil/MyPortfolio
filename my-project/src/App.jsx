@@ -51,15 +51,15 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-gray-50 p-4 rounded-lg shadow hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-semibold">BDRRMC Web Responsive Application</h3>
-              <p className="text-gray-600">A brief description of Project 1.</p>
+              <p className="text-gray-600">BDRRMC Web Responsive Application: Enhancing Disaster Preparedness and Responses with Google Maps API and GPS Tracking. The application is an innovative platform intended to improve disaster preparation and response efforts. </p>
             </div>
             <div className="bg-gray-50 p-4 rounded-lg shadow hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-semibold">Sales and Inventory System</h3>
-              <p className="text-gray-600">A brief description of Project 2.</p>
+              <p className="text-gray-600">A Sales and Inventoy system for XYT Company made with visual basic.</p>
             </div>
             <div className="bg-gray-50 p-4 rounded-lg shadow hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-semibold">ReactJs Portfolio</h3>
-              <p className="text-gray-600">A brief description of Project 3.</p>
+              <p className="text-gray-600">A Personal portfolio made from ReactJs and tailwindcss.</p>
             </div>
             {/* Add more projects as needed */}
           </div>
@@ -81,9 +81,9 @@ function App() {
           <h2 className="text-2xl font-bold mb-4">Contact</h2>
           <p className="text-gray-600">Feel free to reach out to me via email or connect with me on social media.</p>
           <ul className="space-y-2 mt-4">
-            <li>Email: <a href="mailto:youremail@example.com" className="text-blue-500">m.jugarap.511752@umindanao.edu.ph</a></li>
-            <li>LinkedIn: <a href="https://linkedin.com/in/yourprofile" className="text-blue-500">linkedin.com/in/yourprofile</a></li>
-            <li>GitHub: <a href="https://github.com/yourusername" className="text-blue-500">github.com/Kram-neil</a></li>
+            <li>Email: <a href="mailto:m.jugarap.511752@umindanao.edu.ph" className="text-blue-500">m.jugarap.511752@umindanao.edu.ph</a></li>
+            <li>LinkedIn: <a href="https://linkedin.com/in/yourprofile" className="text-blue-500">N/A</a></li>
+            <li>GitHub: <a href="https://github.com/Kram-neil" className="text-blue-500">github.com/Kram-neil</a></li>
             {/* Add more contact options as needed */}
           </ul>
         </section>
