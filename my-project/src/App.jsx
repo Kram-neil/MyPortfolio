@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 function App() {
-  return (
-    
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [darkMode]);
+  const handleToggle = () => {
+    setDarkMode(!darkMode);
+  };
+    return (
     <div className="min-h-screen bg-gray-100 text-gray-800">
       {/* Header */}
       <header className="bg-white shadow-md py-4">
@@ -14,6 +25,25 @@ function App() {
             <li><a href="#certificates" className="hover:text-blue-500">Certificates</a></li>
             <li><a href="#contact" className="hover:text-blue-500">Contact</a></li>
           </ul>
+          {/* Dark Mode Switch */}
+          <div className="ml-4 flex items-center">
+            <label htmlFor="dark-mode-toggle" className="mr-2">Dark Mode</label>
+            <input 
+              type="checkbox" 
+              id="dark-mode-toggle" 
+              checked={darkMode}
+              onChange={handleToggle}
+              className="hidden"
+            />
+            <label 
+              htmlFor="dark-mode-toggle" 
+              className={`cursor-pointer w-12 h-6 flex items-center bg-gray-200 dark:bg-gray-700 rounded-full p-1 transition duration-300 ${darkMode ? 'bg-blue-500' : 'bg-gray-300'}`}
+            >
+              <div 
+                className={`w-4 h-4 bg-white rounded-full shadow-md transform transition-transform duration-300 ${darkMode ? 'translate-x-6' : 'translate-x-1'}`}
+              ></div>
+              </label>
+              </div>
         </nav>
       </header>
 
@@ -68,13 +98,47 @@ function App() {
         {/* Certificates Section */}
         <section id="certificates" className="bg-white p-8 rounded-lg shadow-md">
           <h2 className="text-2xl font-bold mb-4">Certificates</h2>
-          <ul className="list-disc list-inside space-y-2 text-gray-600">
-            <li>ITS Certificate in Cybersecurity - Certiport</li>
-            <li>National Certificate II in CSS - TESDA</li>
-            <li>MTA Certificate in Introduction to JAVA - Certiport</li>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Certificate 1 */}
+            <div className="flex flex-col items-center bg-gray-50 p-4 rounded-lg shadow hover:shadow-lg transition-shadow">
+              <div className="w-full h-48 overflow-hidden rounded-md">
+                <img 
+                  src="ITS cert.jpg"  
+                  alt="Certificate 1" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <p className="mt-4 text-lg font-semibold text-gray-800">ITS Certificate in Cybersecurity</p>
+              <p className="text-gray-600">Certiport</p>
+            </div>
+             {/* Certificate 2 */}
+             <div className="flex flex-col items-center bg-gray-50 p-4 rounded-lg shadow hover:shadow-lg transition-shadow">
+              <div className="w-full h-48 overflow-hidden rounded-md">
+                <img 
+                  src="NC2 cert.jpg"  
+                  alt="Certificate 2" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <p className="mt-4 text-lg font-semibold text-gray-800">National Certificate II in CSS </p>
+              <p className="text-gray-600">TESDA</p>
+            </div>
+            {/* Certificate 1 */}
+            <div className="flex flex-col items-center bg-gray-50 p-4 rounded-lg shadow hover:shadow-lg transition-shadow">
+              <div className="w-full h-48 overflow-hidden rounded-md">
+                <img 
+                  src="mta cert.png"  
+                  alt="Certificate 1" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <p className="mt-4 text-lg font-semibold text-gray-800">MTA Certificate (BADGE) in Introduction to Programming using JAVA</p>
+              <p className="text-gray-600">Certiport</p>
+            </div>
             {/* Add more certificates as needed */}
-          </ul>
+          </div>
         </section>
+
 
         {/* Contact Section */}
         <section id="contact" className="bg-white p-8 rounded-lg shadow-md">
